@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <textarea id="text"></textarea>
+    <p id="count">0 / 100</p>
+
+
+    <script>
+
+        const textarea = document.getElementById("text");
+        const counter = document.getElementById("count");
+        const limit = 100;
+
+        textarea.addEventListener("input", Count);
+
+        function Count() {
+            const length = textarea.value.length;
+
+            if (length > limit) {
+                counter.style.color = "red";
+            } else {
+                counter.style.color = "black";
+            }
+            
+            counter.textContent = `Text Length = ${length} / Text Limit = ${limit} / Text Left = ${limit - length}`;
+
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

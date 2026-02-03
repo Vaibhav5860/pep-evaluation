@@ -1,0 +1,116 @@
+
+
+Question 1: Throttled Click Counter (Medium Level)
+Problem Statement
+
+You are given a button and a paragraph element.
+Implement a throttled click counter using JavaScript.
+
+Requirements
+
+The count should increase when the button is clicked.
+
+Only one click per second should be counted. //extra points
+
+Any extra clicks within the same 1-second window must be ignored. // extra points
+
+The UI should always display the correct count value.
+
+Starter HTML
+<button id="btn">Click</button>
+<p id="count">0</p>
+
+Constraints
+
+You must use setTimeout.
+
+You must use a closure to manage state.
+
+Do not use global variables.
+
+Do not use inline event handlers (onclick).
+
+Notes
+
+The button should remain clickable, but extra clicks should not affect the count.
+
+The solution should demonstrate proper control over execution timing.
+
+
+
+
+Question 2:Live Character Counter
+Problem Statement
+
+You are given a textarea and a paragraph element.
+Write JavaScript code to implement a live character counter.
+
+Requirements
+
+Display the live character count as the user types.
+
+The maximum character limit is 100.
+
+When the character count exceeds 100, the count text should turn red.
+
+When the count is within the limit, the color should return to normal.
+
+Starter HTML
+<textarea id="text"></textarea>
+<p id="char-count">0 / 100</p>
+
+Constraints
+
+Use JavaScript event listeners.
+
+Do not use inline HTML event handlers.
+
+Update the UI dynamically.
+
+Expected Behavior
+
+Typing updates the count immediately.
+
+Clearing text resets the count.
+
+Color change reflects whether the limit is exceeded.
+
+
+
+Question 3: Implement once() Function (Closures)
+Problem Statement
+
+Write a JavaScript function once(fn) that ensures a given function can be executed only once, regardless of how many times it is called.
+
+Once the function has been executed for the first time, all subsequent calls should have no effect.
+
+Expected Behavior
+function greet() {
+  console.log("Hello");
+}
+
+const greetOnce = once(greet);
+
+greetOnce(); // Hello
+greetOnce(); // no output
+greetOnce(); // no output
+
+Requirements
+
+You must use a closure to track execution state.
+
+The original function should execute only once.
+
+Do not use global variables.
+
+Extra calls should do nothing.
+
+🚫 Do NOT modify the original function.
+
+Constraints
+
+Use plain JavaScript.
+
+Do not use external libraries.
+
+Keep the implementation clean and readable.

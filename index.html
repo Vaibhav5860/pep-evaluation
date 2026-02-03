@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn">Click</button>
+    <p id="count">0</p>
+
+
+    <script>
+        const button = document.getElementById("btn");
+        const counterP = document.getElementById("count");
+
+
+
+        function Counter() {
+
+            let count = 0;
+            let clicked = false;
+
+            return function () {
+
+                if (!clicked) {
+                    count = count + 1;
+                    counterP.textContent = count;
+                    clicked = true;
+
+                    setTimeout(function () {
+                        clicked = false;
+                    }, 1000);
+                }
+            };
+        }
+
+        const ClickHandle = Counter();
+
+        button.addEventListener("click", ClickHandle);
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
